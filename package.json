@@ -1,0 +1,11 @@
+{
+  "name": "Todoly",
+  "version": "1.0.0",
+  "description": "A todo app that is a part of the odin Project.",
+  "main": "todo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "George Cortes",
+  "license": "ISC"
+}
