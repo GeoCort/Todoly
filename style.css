@@ -1,8 +1,39 @@
 /* Sidebar */
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(245, 245, 245);
+}
+.mainContent{
+    display:grid;
+    background-color: rgb(49, 48, 48);
+    min-height: 100vh;
+    grid-template-columns: clamp(300px, 20vw,30%) auto;
+
+}
 .sidebar{
     border-right:1px solid black;
-    width:30%;
+    background-color:rgb(80, 80, 80);
+    font-size: 1.5rem;
+    padding:1rem 0 1rem 1rem;
 }
-body{
-    background-color: rgb(102, 102, 102);
+.sidebarTitle{
+    padding-bottom:1rem;
+    display: block;
 }
+.sideSelection{
+    font-size: 1.25rem;
+    padding:1rem 0 1rem;
+    border-bottom: 1px solid;
+    margin-right: 1rem;
+}
+#project-title{
+    font-size:3.5rem;
+    padding:1rem 0 0 .5rem;
+}
+#subtitle{
+    font-size:18px;
+    font-style: italic;
+    margin-left: 4rem;
+    padding:1rem 0 1rem 0;
+}
+

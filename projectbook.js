@@ -33,6 +33,7 @@ export default class ProjectBook{
             let p =  document.createElement("p");
             p.innerText = `${x.name}`
             div.appendChild(p)
+            div.classList.add("sideSelection")
             sideBar.appendChild(div);
         })
     }
