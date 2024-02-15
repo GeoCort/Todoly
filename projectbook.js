@@ -1,3 +1,4 @@
+import Project from "./project.js";
 export default class ProjectBook{
     constructor(project){
         this.collection = [];
@@ -5,9 +6,7 @@ export default class ProjectBook{
         this.size = 1;
         this.selected = 0;
     }
-    addProject(project){
-        this.collection.push([project])
-    }
+   
     getSize(){
         return this.size;
     }
@@ -17,15 +16,14 @@ export default class ProjectBook{
     setSelection(s){
         this.selected = s;
     }
-    renderSelectedBook(titleBar){
+    renderSelectedBook(titleBar,subtitle, listContainer){
        titleBar.innerText = `${this.collection[this.selected].name}`
-        // this.collection[this.selected].map((x)=>{
-        //     let div = document.createElement("div");
-        //     let p =  document.createElement("p");
-        //     p.innerText = `${x.name}`
-        //     div.appendChild(p)
-        //     titleBar.appendChild(div);
-        // })
+       subtitle.innerText = `${this.collection[this.selected].description}`
+       this.collection[this.selected].collection.map((x)=>{
+        let div = document.createElement("div")
+        div.innerText = `${x.title}`
+        listContainer.appendChild(div);
+       })
 
     }
 
@@ -38,4 +36,18 @@ export default class ProjectBook{
             sideBar.appendChild(div);
         })
     }
+    
+    createNewProject(name){
+        console.log(name)
+        let proj = new Project(name);
+        this.addProject(proj)   
+        console.log(proj.name)
+    } 
+    addProject(project){
+        this.collection.push(project)
+        this.size++;
+    }
+
+
+
 }

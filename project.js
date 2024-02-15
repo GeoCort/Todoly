@@ -1,6 +1,7 @@
 export default class Project{
-    constructor(name){
+    constructor(name,description=""){
         this.name= name;
+        this.description= description
         this.collection = [];
         this.position = 0; // currently selected index | default notebook
     }
